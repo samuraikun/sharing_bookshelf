@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './Header';
 import BookShelf from './Bookshelf';
+import books from '../books_response';
 
 class App extends Component {
   render() {
@@ -9,7 +10,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="App-container">
-          <BookShelf />
+          <BookShelf books={books} />
         </div>
       </div>
     );
