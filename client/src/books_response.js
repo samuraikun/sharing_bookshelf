@@ -1,6 +1,6 @@
 // These are mocks of Google Books API
 // https://developers.google.com/books
-export default books = [
+const books = [
   {
     title: 'React入門 React・Reduxの導入からサーバサイドレンダリングによるUXの向上まで',
     subtitle: "",
@@ -48,3 +48,5 @@ export default books = [
     language: "ja"
   }
 ];
+
+export default books;
