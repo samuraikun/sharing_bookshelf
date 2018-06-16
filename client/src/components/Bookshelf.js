@@ -5,18 +5,16 @@ class BookShelf extends Component {
   renderList() {
     return this.props.books.map((book) => {
       return (
-        <li key={book.title}>
-          <Book book={book} />
-        </li>
+        <Book key={book.title} book={book} />
       );
     });
   }
 
   render() {
     return (
-      <ul>
+      <div>  
         {this.renderList()}
-      </ul>
+      </div>
     );
   }
 }
