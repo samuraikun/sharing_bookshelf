@@ -8,7 +8,8 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = {
   card: {
-    maxWidth: 345,
+    maxWidth: 385,
+    maxHeight: 400
   },
   media: {
     height: 0,
@@ -20,24 +21,22 @@ const Book = (props) => {
   const { classes } = props;
 
   return (
-    <div>
-      <Card className={classes.card}>
-        <CardMedia
-          className={classes.media}
-          image={props.book.imageLinks.smallThumbnail}
-          title="book image"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="headline" component="h2">
-            {props.book.title}
-          </Typography>
-          <Typography component="p">
-            {props.book.description}
-          </Typography>
-        </CardContent>
-      </Card>
-    </div>
-  ); 
+    <Card className={classes.card}>
+      <CardMedia
+        className={classes.media}
+        image={props.book.imageLinks.smallThumbnail}
+        title="book image"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="headline" component="h2">
+          {props.book.title}
+        </Typography>
+        <Typography component="p">
+          {props.book.description}
+        </Typography>
+      </CardContent>
+    </Card>
+  );
 }
 
 Book.propTypes = {
