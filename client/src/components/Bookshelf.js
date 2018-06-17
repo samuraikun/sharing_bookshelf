@@ -4,15 +4,12 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Book from './Book';
 
-const styles = theme => ({
+const styles = {
   root: {
     flexGrow: 1,
     padding: '50px'
-  },
-  control: {
-    padding: theme.spacing.unit * 2,
   }
-});
+};
 
 class BookShelf extends Component {
   renderList() {
