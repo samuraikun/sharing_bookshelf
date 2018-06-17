@@ -4,16 +4,20 @@ import Header from './Header';
 import BookShelf from './Bookshelf';
 import SearchForm from './SearchForm';
 
-import books from '../books_response';
-
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { books: this.props.books }
+  }
+
   render() {
     return (
       <div className="App">
         <Header />
         <SearchForm />
         <div className="App-container">
-          <BookShelf books={books} />
+          <BookShelf books={this.state.books} />
         </div>
       </div>
     );

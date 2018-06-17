@@ -12,12 +12,6 @@ const styles = {
 };
 
 class BookShelf extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { books: this.props.books }
-  }
-  
   renderList(books) {
     return books.map((book) => {
       return (
@@ -33,7 +27,7 @@ class BookShelf extends Component {
 
     return (
       <Grid container className={classes.root} direction="row" justify="flex-start" spacing={40}>
-        {this.renderList(this.state.books)}
+        {this.renderList(this.props.books)}
       </Grid>
     );
   }
