@@ -13,25 +13,23 @@ const styles = {
 class SearchForm extends Component {
   constructor(props) {
     super(props);
-
-    this.state = { keyword: '' };
+    this.onInputChange = this.onInputChange.bind(this);
   }
 
-  onInputChange(keyword) {
-    this.setState({keyword});
-
-    console.log(keyword);
+  onInputChange(event) {
+    this.props.onSearchKeywordChange(event.target.value);
   }
 
   render() {
     const { classes } = this.props;
+    const keyword = this.props.keyword;
 
     return (
       <Grid container className={classes.root} justify="center" spacing={16}>
         <Grid item>
           <TextField
-            value={this.state.keyword}
-            onChange={event => this.onInputChange(event.target.value)}
+            value={keyword}
+            onChange={this.onInputChange}
           />
         </Grid>  
       </Grid>
