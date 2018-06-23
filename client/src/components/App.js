@@ -8,25 +8,22 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.handleSearchKeywordChange = this.handleSearchKeywordChange.bind(this);
-    this.state = { books: this.props.books, keyword: '' }
+    this.state = { books: this.props.books }
   }
 
   handleSearchKeywordChange(keyword) {
-    this.setState({keyword});
-
-    this.searchBook();
+    if (!keyword) {
+      this.setState({ books: this.props.books });
+    } else {
+      this.searchBook(keyword);
+    }
   }
 
-  searchBook() {
-    const books = this.state.books;
-    const keyword = this.state.keyword;
-    const search_results = books.filter(book => book.title.includes(`${keyword}`));
+  searchBook(keyword) {
+    let books = this.state.books;
+    let updated_books = books.filter(book => book.title.toLowerCase().includes(`${keyword.toLowerCase()}`));
 
-    if (books.length !== 0) {
-      this.setState({ books: search_results });
-    } else {
-      this.setState({ books: this.props.books });
-    }
+    this.setState({ books: updated_books });
   }
 
   render() {
