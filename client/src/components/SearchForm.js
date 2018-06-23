@@ -28,6 +28,7 @@ class SearchForm extends Component {
       <Grid container className={classes.root} justify="center" spacing={16}>
         <Grid item>
           <TextField
+            placeholder="search book"
             value={keyword}
             onChange={this.onInputChange}
           />

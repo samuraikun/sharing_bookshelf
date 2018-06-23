@@ -99,6 +99,111 @@ const books = [
       thumbnail: "http://books.google.com/books/content?id=r_JQDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
     },
     language: "ja"
+  },
+  {
+    title: "Ruby on Rails 5の上手な使い方 現場のエンジニアが教えるRailsアプリケーション開発の実践手法",
+    authors: [
+      "太田智彬",
+      "株式会社リクルートテクノロジーズ",
+      "宗像亜由美",
+      "寺下翔太",
+      "手塚亮"
+    ],
+    publisher: "翔泳社",
+    publishedDate: "2018-01-24",
+    description: "開発からリリースや運用まで、 ベストプラクティスが一冊でわかる！ 本書は、Ruby on Rails 5によるアプリケーションの 開発からリリース・運用まで、そのベストプラクティスが一冊でわかる本です。",
+    imageLinks: {
+      smallThumbnail: "http://books.google.com/books/content?id=VCFHDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      thumbnail: "http://books.google.com/books/content?id=VCFHDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    language: "ja"
+  },
+  {
+    title: "プログラマのためのDocker教科書 第2版 インフラの基礎知識&コードによる環境構築の自動化",
+    authors: [
+      "WINGSプロジェクト阿佐志保"
+    ],
+    publisher: "翔泳社",
+    publishedDate: "2018-04-11",
+    description: "インフラ基礎知識＋インフラ環境構築 入門書の決定版！ 本書は、コンテナ技術を使ったアプリケーション実行環境プラットフォームである「Docker」を使ってインフラを構築するための入門書として好評を博した前著の改訂版です。",
+    imageLinks: {
+      smallThumbnail: "http://books.google.com/books/content?id=wexTDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      thumbnail: "http://books.google.com/books/content?id=wexTDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    language: "ja"
+  },
+  {
+    title: "プログラマのためのDocker教科書 インフラの基礎知識＆コードによる環境構築の自動化",
+    authors: [
+      "山田祥寛",
+      "WINGSプロジェクト阿佐志保"
+    ],
+    publisher: "翔泳社",
+    publishedDate: "2015-11-19",
+    description: "従来、システム開発のプログラマは、顧客の業務要件を理解し、要件に応じた設計を行ない、プログラミング言語を使ってシステムを実装し、仕様通りの機能を持つかをテストすることが主なミッションでした。",
+    imageLinks: {
+      smallThumbnail: "http://books.google.com/books/content?id=EbrmCgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      thumbnail: "http://books.google.com/books/content?id=EbrmCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    language: "ja"
+  },
+  {
+    title: "コンテナ・ベース・オーケストレーション Docker/Kubernetesで作るクラウド時代のシステム基盤",
+    authors: [
+      "須江信洋",
+      "福田潔",
+      "平岡大祐",
+      "市川豊",
+      "青山尚暉",
+      "山田修司",
+      "佐藤聖規",
+      "境川章一郎",
+      "前佛雅人",
+      "橋本直哉",
+      "矢野哲朗"
+    ],
+    publisher: "翔泳社",
+    publishedDate: "2018-03-15",
+    description: "Dockerだけでは終わらない？！ コンテナ技術を実践的に使うための解説書！ コンテナは主としてLinuxを分割し、複数のOSとして利用するもので、1つのコンピュータを分割して利用する技術の新潮流です。",
+    imageLinks: {
+      smallThumbnail: "http://books.google.com/books/content?id=n5VRDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      thumbnail: "http://books.google.com/books/content?id=n5VRDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    language: "ja"
+  },
+  {
+    title: "AWSによるサーバーレスアーキテクチャ",
+    authors: [
+      "長尾 高弘"
+    ],
+    publisher: "翔泳社",
+    publishedDate: "2018-03-14",
+    description: "クラウドコンピューティングの技術の中でも、昨今注目を集めているのがサーバーレスアーキテクチャです。 FaaS(Function-As-A-Service)とも呼ばれるサーバーレスアーキテクチャは、ファンクション(関数)と呼ばれるマイクロサービスを実装し、組み合わせながら、サービスを構築していくアーキテクチャです。",
+    categories: [
+      "Computers"
+    ],
+    imageLinks: {
+      smallThumbnail: "http://books.google.com/books/content?id=vZVRDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      thumbnail: "http://books.google.com/books/content?id=vZVRDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    language: "ja"
+  },
+  {
+    title: "AWS Lambda実践ガイド",
+    authors: [
+      "大澤 文孝"
+    ],
+    publisher: "インプレス",
+    publishedDate: "2017-10-16",
+    description: "AWSで展開されている現行システムのほとんどは、開発したプログラムを動かすために、仮想サーバーとしてEC2インスタンスを利用しています。仮想サーバーという違いこそあれ、構成そのものは、オンプレミスのときと大きく変わっていません。",
+    categories: [
+      "Computers"
+    ],
+    imageLinks: {
+      smallThumbnail: "http://books.google.com/books/content?id=HDs4DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      thumbnail: "http://books.google.com/books/content?id=HDs4DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    language: "ja"
   }
 ];
 
