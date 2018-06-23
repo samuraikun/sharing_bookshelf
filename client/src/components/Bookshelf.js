@@ -4,19 +4,16 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Book from './Book';
 
-const styles = theme => ({
+const styles = {
   root: {
     flexGrow: 1,
     padding: '50px'
-  },
-  control: {
-    padding: theme.spacing.unit * 2,
   }
-});
+};
 
 class BookShelf extends Component {
-  renderList() {
-    return this.props.books.map((book) => {
+  renderList(books) {
+    return books.map((book) => {
       return (
         <Grid key={book.title} item xs={3}>
           <Book book={book} />
@@ -30,7 +27,7 @@ class BookShelf extends Component {
 
     return (
       <Grid container className={classes.root} direction="row" justify="flex-start" spacing={40}>
-        {this.renderList()}
+        {this.renderList(this.props.books)}
       </Grid>
     );
   }
