@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Book from './Book';
+import SearchForm from './SearchForm';
+import books from '../books_response';
 
 const styles = {
   root: {
@@ -12,6 +14,27 @@ const styles = {
 };
 
 class BookShelf extends Component {
+  constructor() {
+    super();
+    this.state = { books: books }
+    this.handleSearchKeywordChange = this.handleSearchKeywordChange.bind(this);
+  }
+
+  handleSearchKeywordChange(keyword) {
+    if (!keyword) {
+      this.setState({ books: books });
+    } else {
+      this.searchBook(keyword);
+    }
+  }
+
+  searchBook(keyword) {
+    let books = this.state.books;
+    let updated_books = books.filter(book => book.title.toLowerCase().includes(`${keyword.toLowerCase()}`));
+
+    this.setState({ books: updated_books });
+  }
+
   renderList(books) {
     return books.map((book) => {
       return (
@@ -26,9 +49,12 @@ class BookShelf extends Component {
     const { classes } = this.props;
 
     return (
-      <Grid container className={classes.root} direction="row" justify="flex-start" spacing={40}>
-        {this.renderList(this.props.books)}
-      </Grid>
+      <div>
+        <SearchForm onSearchKeywordChange={this.handleSearchKeywordChange} />
+        <Grid container className={classes.root} direction="row" justify="flex-start" spacing={40}>
+          {this.renderList(this.state.books)}
+        </Grid>
+      </div>
     );
   }
 }
