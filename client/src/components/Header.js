@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Header = () => {
-  return (
-    <header className="App-header">
-      <h3>Sharing BookShelf</h3>
-    </header>
-  );
+class Header extends Component {
+  render() {
+    return (
+      <header className="App-header">
+        <h3>Sharing BookShelf</h3>
+      </header>
+    );
+  }
 }
 
 export default Header;
